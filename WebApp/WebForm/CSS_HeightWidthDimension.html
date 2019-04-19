@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>CSS Height and Width Dimension</title>
+    <style>
+        .art1{
+            border:1px solid green;
+            width:50%;
+        }
+        code{
+            background-color:#f1f1f1;
+            color:red;
+        }
+        .d1{
+            height:100px;
+            width:500px;
+            border:2px solid green;
+        }
+    </style>
+</head>
+<body>
+    <p>CSS Height and Width Dimensions</p>
+    <br />
+    <br />
+    <article class="art1">
+        <h1>CSS Dimension Proerties</h1>
+        <p>The CSS dimension properties allow you to control the height and width of an element.</p>
+        <p>This eleemnt has a width of 100%</p>
+    </article>
+    <hr />
+    
+    <article>
+        <h1>Setting height and width</h1>
+        <p>The <code>height</code> and <code>width</code> 
+        properties are used to set the height and width of an element.</p>
+        <p>The <code>height</code> and <code>width</code> 
+        can be set to auto (this is default.Means the brower calculates the height and width),
+        or be specified in length values,like px,cm,etc. or percent(%) of the containing block.</p>
+        <div class="d1">This div element has a height of 100 pixels and a width of 500 pixels.</div>
+    </article>
+    <hr />
+
+    <article>
+        <h1>Setting max-width</h1>
+        <p style="border:2px solid green;max-width:500px;height:100px;">The <code>max-width</code> property is used to set the maximum width of an element.
+        If the browser's windows smaller than the max-width,the width of the element will reduce
+        to align with the browser's window.</p>
+
+    </article>
+</body>
+</html>

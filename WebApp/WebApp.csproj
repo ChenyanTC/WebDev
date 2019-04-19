@@ -82,6 +82,9 @@
     <Content Include="Web.config" />
     <Content Include="WebForm\CSStest.html" />
     <Content Include="WebForm\CSS_Borders.html" />
+    <Content Include="WebForm\CSS_HeightWidthDimension.html" />
+    <Content Include="WebForm\CSS_Margin.html" />
+    <Content Include="WebForm\CSS_Padding.html" />
     <Content Include="WebForm\css_test.html" />
     <Content Include="WebForm\Login.html" />
     <Content Include="WebForm\test1.html" />
