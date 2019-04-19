@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="/scripts/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#form1").submit(function () {           
+                var formArray = $("#form1").serializeArray();//将form1提交内容序列化为数组
+                var formObject = {};
+                $.each(formArray, function (index, item) {
+                    formObject[item.name] = item.value;
+                });//将form1提交的内容转化为对象
+                $.post(
+                    "/Handler/WebForm_Login.ashx",//响应url
+                    { data: JSON.stringify(formObject) },//传递数据
+                    function (data, status) {
+                        alert("statu:" + status + "\ndata:" + data );//返回状态和数据
+                    }
+                );
+            })
+        });
+    </script>
+    <title>Login</title>
+</head>
+<body>
+    <form id="form1">
+        Email:<input type="email" name="email_form1" /><br />
+        Name:<input type="text" name="name_form1" />
+        <input type="submit" value="Submit" />
+    </form>
+</body>
+</html>

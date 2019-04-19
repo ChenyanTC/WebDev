@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>CSS Borders</title>
+    <style>
+        code{
+            color:red;
+            background-color:#f1f1f1;
+        }
+        p.dotted{
+            border-style:dotted
+        }
+        p.dashed{
+            border-style:dashed
+        }
+        p.solid {
+            border-style: solid
+        }
+        p.double {
+            border-style: double
+        }
+        p.grove {
+            border: 15px groove green;
+        }
+        p.ridge {
+            border: 15px ridge green;
+        }
+        p.inset {
+            border: 15px inset green;
+        }
+        p.outset {
+            border: 15px outset green;
+        }
+        p.none {
+            border-style: none;
+        }
+        p.hidden {
+            border-style: hidden;
+        }
+        p.mix{
+            border-width:15px;
+            border-style:dotted dashed solid double;
+            border-color:green;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Borders</h1>
+    <article style="border:15px groove green;">
+        <h1>CSS Border Properties</h1>
+        <p>The css <code>border</code> properties allows you to specify the style,width,and color of an element's border. </p>
+        <p>This element has a groove border that is 15px wide and green.</p>
+    </article>
+    <hr />
+    <article>
+        <h1>Border Style</h1>
+        <p>The <code>border-style</code> property specifies what kind of border to display.</p>
+        <P>The following values are allowed:</P>
+        <ul>
+            <li><code>dotted</code> 点</li>
+            <li><code>dashed</code> 虚线</li>
+            <li><code>solid</code> 实线</li>
+            <li><code>double</code> 双实线</li>
+            <li><code>groove</code> 3D凹槽 The effect depends on the border-color value</li>
+            <li><code>ridge</code> 3D菱形边框 The effect depends on the border-color value</li>
+            <li><code>inset</code> 3D凹边 The effect depends on the border-color value</li>
+            <li><code>outset</code> 3D凸边 The effect depends on the border-color value</li>
+            <li><code>none</code> Defines no border</li>
+            <li><code>hidden</code> Define a hidden border</li>
+        </ul>
+    </article>
+    <article style="background-color:#f1f1f1">
+        <h1>Example</h1>
+        <div style="background-color:white">
+            <p class="dotted">A dotted border</p>
+            <p class="dashed">A dashed border</p>
+            <p class="solid">A solid border</p>
+            <p class="double">A double border</p>
+            <p class="grove">A 15px grove purple border</p>
+            <p class="ridge">A 15px ridge purple border</p>
+            <p class="inset">A 15px inset purple border</p>
+            <p class="outset">A 15px outset purple border</p>
+            <p class="none">none border.</p>
+            <p class="hidden">A hidden border</p>
+            <p class="mix">A mixed border</p>
+        </div>
+    </article>
+    <hr />
+    <article>
+        <h1>Border Color</h1>
+        <p>The <code>broder-color</code> property is used to set the color of the four borders.</p>
+        <p>The color can be set by:</p>
+        <ul>
+            <li>name- like "red"</li>
+            <li>Hex- like "#ff0000"</li>
+            <li>RGB- like "rgb(255,0,0)"</li>
+            <li>transparent</li>
+        </ul>
+        <p>The <code>border-color</code> property have from one to four values(for the top border,right border,bottom border,and the left border).</p>
+        <p>If <code>border-color</code> is not set,it inherits the color of the element.</p>
+    </article>
+    <hr />
+    <article>
+        <h1>Border Width</h1>
+        <p>The <code>border-width</code> property specifies the width of the four borders.</p>
+    </article>
+    <article>
+        <h1>Border Individual Sides </h1>
+        <p>In CSS, there is also tproperties for specifying each of the borders(top,right,bottom,and left):</p>
+    </article>
+    <article style="background-color:#f1f1f1">
+        <h1>Example</h1>
+        <p style="border-width:5px 10px 15px 20px;border-style:dashed dotted double groove;border-color:red yellow blue gray;">The border Set different border-width, border-style, border-color in each borders</p>
+    </article>
+
+</body>
+</html>

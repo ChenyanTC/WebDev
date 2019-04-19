@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>CSS TEST</title>
+    <style type="text/css">
+        #div1{
+            border:5px solid mediumpurple;/*边框设置  宽度 样式 颜色*/
+        }
+        #div2 {
+            border-width: thin medium thick 10px; /*边框宽度  上右下左，细 中等 粗 10px*/
+            border-style: dotted solid double none; /*边框样式 点 实 双实线 无*/
+            border-color:purple;/*边框颜色*/
+        }
+        /*element selector.*/
+        p{
+            color:red;
+            text-align:left;
+        }
+        /*id selector*/
+        #p1{
+            color:green;
+            text-align:right;
+        }
+        .at1{
+            color:black;
+            text-align:center;
+        }
+        /*class tester*/
+        .at2{
+            color:blue;
+            text-align:left;
+        }
+        /*element and class selector.*/
+        p.at3 {
+            color: blue;
+            text-align: left;
+        }
+        /*Grouping selector*/
+        h1,h2{
+            color:darkgoldenrod;
+            text-align:center;
+        }
+        p{
+            color:black;
+        }
+        /*background color*/
+        #dl_v1 {
+            background-color: lightblue;
+        }
+        /*background image and repeat*/
+        #bg_img1 {
+            height: 350px;
+            color:greenyellow;
+            background-image: url("../img/eg_planets.jpg");
+            background-repeat: repeat-x;
+          
+        }
+        /*background position*/
+        #bg_img2 {
+            height: 350px;
+            background-image: url("../img/eg_planets.jpg");
+            background-repeat: no-repeat;
+            background-position:right top;
+        }
+        /*background attachment*/
+        #bg_img3 {
+            height: 350px;
+            background-image: url("../img/eg_planets.jpg");
+            background-repeat: no-repeat;
+            background-position: right top;
+            background-attachment:fixed
+        }
+        code{
+            color:red;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="div1">This is div1</div>
+    <br />
+    <br />
+    <div id="div2">This is div2</div>
+    <br />
+    <br />
+    <div id="div3">This is div3</div>
+    <br />
+    <details>
+        <summary>CSS Selector</summary>
+        <p>The element selector.The element selector selects elements based on the element name. </p>
+        <p>The id selector.To select an element with a specific id, write a hash(#) character,followed by the id of the element.</p>
+        <p>The class selector.The class selector selects element with a specific class attribute.To select element with a specific class,write a period(.) character,followed by the name of the class.</p>
+        <p>The HTML elements can also refer to more than one class.</p>
+        <p>The class can follow the element,like p.center.(The center is the class name.) </p>
+        <p class="at3">The Grouping Selectors can group the selectors,to minimize the code.To group selectors,separate each selector with a comma.</p>
+    </details>
+    <p id="p1">This a id selector test.</p>
+    <article class="at1 at2">
+        <p>This a class selector.</p>
+    </article>
+    <section>
+        <article>
+            <h1>This is a group test,h1.</h1>
+            <h2>This is a group text,h2.</h2>
+        </article>
+    </section>
+    <hr />
+    <section>
+        <article>
+            <h1 style="color:blue;margin-left:30px;">CSS How to</h1>
+            <h3>There are three ways of inserting a style sheet.</h3>
+            <ul>
+                <li>External style sheet</li>
+                <li>Internal style sheet</li>
+                <li>Inline style</li>
+            </ul>
+        </article>
+        <article>
+            <h3>Multiple Style Sheet</h3>
+            <strong>The value from the last read style sheet will be used.</strong>
+            <ul>
+                <li>If the internal style is defined after the link to the external style sheet,the internal style will be effective.</li>
+                <li>If the external style sheet is defined after the internal style sheet,the external style will be effective.</li>
+                <li>The Inline style has the highest priority.</li>
+            </ul>
+        </article>
+        <article>
+            <h3>The Cascading Order</h3>
+            <p>Order:</p>
+            <ol>
+                <li>The inline style.</li>
+                <li>The internal and external style sheets(in head section)</li>
+                <li>The browser default.</li>
+            </ol>
+        </article>
+    </section>
+    <hr />
+    <section>
+        <article>
+            <h1 style="color:blue;">CSS Colors</h1>
+            <p>Colors in CSS are most often specified by:</p>
+            <ul>
+                <li>A valid color name - like "red"</li>
+                <li>an RGB value - like "rgb(255,0,0)"</li>
+                <li>a HEX value - like "#ff0000"</li>
+            </ul>
+            <p style="background-color:red;color:black">Red background-color</p>
+            <p style="background-color:rgb(0,255,0);color:black">Background-color set by using rgb(0,255,0)</p>
+            <p style="background-color:#0000FF;color:black">Background-color set by using #0000FF</p>
+        </article>
+    </section>
+    <hr />
+    <section>
+        <article>
+            <h1>CSS Background</h1>
+            <div id="div1_bg">
+                <p>The CSS background properties are used to define the background effects for elements. </p>
+                <p>CSS background properties:</p>
+                <dl id="dl_v1">
+                    <dt>background-color</dt>
+                    <dd><code>background-color</code> proerties specifices the background color of an element.</dd>
+                    <dt>background-image</dt>
+                    <dd><code>background-image</code> property specifies an image to use as the background of an element.</dd>
+                    <dt>background-repeat</dt>
+                    <dd>specifies the image repeated way(<code>repeat-x;repeat-y;no-repeat</code>)</dd>
+                    <dt>background-attachment</dt>
+                    <dd>To specifies that the background image should be <code>fixed</code>(will not scroll with the rest of the page)</dd>
+                    <dt>background-position</dt>
+                    <dd>The position of the image is specifies by the <code>background-position</code> property.</dd>
+                </dl>
+                <p id="bg_img1">background-image with x repeat.</p>
+                <p id="bg_img2">background-image with no repeat and position at right top.</p>
+                <p id="bg_img3">background-image with attachment fixed. </p>
+            </div>
+        </article>
+    </section>
+
+</body>
+</html>
